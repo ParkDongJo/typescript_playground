@@ -11,6 +11,10 @@ function addListener(listener: any) {
   });
 }
 
+addListener(addClass);
+
+// 정답
+/*
 function addListener(listener: (this: ThisParameterType<typeof addClass>) => void) {
   links.forEach((link) => {
     link.addEventListener('click', listener);
@@ -18,3 +22,4 @@ function addListener(listener: (this: ThisParameterType<typeof addClass>) => voi
 }
 
 addListener(addClass);
+*/

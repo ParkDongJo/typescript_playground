@@ -9,9 +9,11 @@ div.dataset.name = 'ChatGPT';
 // 어떻게 고쳐야할까?
 // 왜 그렇게 고쳐야할까?
 // 제시한 방법도 어떤 한계가 있을까요?
-// const customData = div as any;
+const customData = div as any;
 
 
+// 정답
+/*
 interface CustomData {
   id: number;
   name: string;
@@ -19,6 +21,7 @@ interface CustomData {
 // const customData = div as HTMLDivElement;
 const customData = div as unknown as CustomData;
 
-console.log(customData);
+console.log(customData.id);
+console.log(customData.name);
 
-
+*/
