@@ -37,12 +37,22 @@ function task(name: string, params2: string[] | CallbackFn, callback?: CallbackF
 
  로그레벨은 info, warn, error 세 가지 중 하나입니다.
 
- 예제
- 1. 에러메시지 하나를 받는 경우
- logMessage('Hello');
- 2. 로그 레벨과 에러메시지를 받는 경우
- logMessage('warn', 'Hello');
 */
+
+// 1. 에러메시지 하나를 받는 경우
+logMessage('Hello');
+// 2. 로그 레벨과 에러메시지를 받는 경우
+logMessage('warn', 'Hello');
+
+// 아래는 TS 오류가 발생해야합니다.
+logMessage('Hello', 'Test');
+logMessage('info');
+logMessage(true);
+logMessage(null);
+logMessage(undefined);
+logMessage({});
+logMessage(1);
+logMessage('warn', 'Hello', 'Hello');
 
 
 type LogLevel = 'info' | 'warn' | 'error';

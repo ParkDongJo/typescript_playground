@@ -1,3 +1,4 @@
+// addClass 의 this 타입은 그대로 두세요.
 function addClass(this: HTMLAnchorElement | HTMLDivElement) {
   this.classList.add('active');
 }
@@ -13,9 +14,25 @@ function addListener(listener: any) {
 
 addListener(addClass);
 
+
 // 정답
+// 아래 
 /*
+function addListener(listener: (this: HTMLElement) => void) {
+  links.forEach((link) => {
+    link.addEventListener('click', listener);
+  });
+}
+
+
 function addListener(listener: (this: ThisParameterType<typeof addClass>) => void) {
+  links.forEach((link) => {
+    link.addEventListener('click', listener);
+  });
+}
+
+
+function addListener<T extends Function>(listener: (this: ThisParameterType<T>) => void) {
   links.forEach((link) => {
     link.addEventListener('click', listener);
   });
