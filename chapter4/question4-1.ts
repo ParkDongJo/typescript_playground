@@ -8,8 +8,3 @@ const pair1 = pairs(1, 'a'); // [number, string]
 const pair2 = pairs(true, 42, 'hello'); // [boolean, number, string]
 const pair3 = pairs('a', 1, true, null); // [string, number, boolean, null]
 
-function pairs<A, B, C, D>(a: A, b: B, c?: C, d?: D): [A, B, C?, D?] {
-  return [a, b, c, d];
-}
-
-
