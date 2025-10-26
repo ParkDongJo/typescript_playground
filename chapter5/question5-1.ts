@@ -18,7 +18,6 @@
 // [ 문제 ]
 // 함수의 결과값의 타입을 뱉어주는
 // MyReturnType 을 직접 정의해봅시다.
-
 // any 를 써도 됩니다.
 
 // function fn(num : number) {
