@@ -1,7 +1,7 @@
 import type Curry from "./types/Curry";
 
 function curry<F extends (...args: any[]) => any>(f: F): Curry<F> {
-  // arity는 함수의 인자 개수
+  // arity는 함수의 인자 개수를 의미 (=항수)
   const arity = f.length;
 
   return (function resolver(...args: unknown[]) {
