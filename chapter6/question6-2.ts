@@ -14,7 +14,10 @@
 - Capitalize, Uncapitalize 유틸리티 타입을 사용할 수 있습니다
  */
 
-// 단계별 힌트
+// 아래 타입을 완성시켜주세요.
+type PascalCaseWithUnderscore = any
+// 아래 테스트 케이스를 통과시켜주세요.
+
 
 /*
   첫번째 힌트
@@ -64,7 +67,7 @@ type JoinWithUnderscore<T extends string[]> = T extends [infer First extends str
 type PascalCaseWithUnderscore<T extends string> = JoinWithUnderscore<CapitalizeFirst<SplitBySpace<T>>>;
 
 // 테스트
-type Test1 = PascalCaseWithUnderscore<'hello world typescript'>; // "Hello_World_Typescript"
-type Test2 = PascalCaseWithUnderscore<'this is a test'>; // "This_Is_A_Test"
-type Test3 = PascalCaseWithUnderscore<'single'>; // "Single"
-type Test44 = PascalCaseWithUnderscore<'hello  world'>; // "Hello__World"
+type Test_6_2_1 = PascalCaseWithUnderscore<'hello world typescript'>; // "Hello_World_Typescript"
+type Test_6_2_2 = PascalCaseWithUnderscore<'this is a test'>; // "This_Is_A_Test"
+type Test_6_2_3 = PascalCaseWithUnderscore<'single'>; // "Single"
+type Test_6_2_4 = PascalCaseWithUnderscore<'hello  world'>; // "Hello__World"
