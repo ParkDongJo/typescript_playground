@@ -14,7 +14,7 @@ async function fetch<T>(url: string): Promise<T> {
 // 만약 Pet[] 이 없다면, any 로 잡힌다. 이는 런타임에서 오류를 발생 시킬 수 있다.
 // 안전한 타입이 아니다.
 async function fetchPets() {
-  const ppl: Pet[] = await fetch<Response>("https://api.example.com/pets").then((res) =>
+  const ppl = await fetch<Response>("https://api.example.com/pets").then((res) =>
     res.json()
   );
   return ppl;
@@ -27,9 +27,9 @@ type PetResponse = {
   json(): Promise<unknown>;
 };
 async function fetchPetsV2(): Promise<PetResponse> {
-  const ppl: Pet[] = await fetch<PetResponse>("https://api.example.com/pets").then((res) =>
+  const ppl = await fetch<PetResponse>("https://api.example.com/pets").then((res) =>
     res.json()
   );
-  return ppl;
+  return ppl as PetResponse;
 }
 
