@@ -1,3 +1,9 @@
 dist/
 .idea
 node_modules
+
+chapter10/my-react-router-app/node_modules
+chapter10/my-react-router-app/build
+chapter10/my-react-router-app/.react-router
+
+
