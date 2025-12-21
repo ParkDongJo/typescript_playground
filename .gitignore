@@ -7,3 +7,6 @@ chapter10/my-react-router-app/build
 chapter10/my-react-router-app/.react-router
 
 
+chapter10/ts-simple-app/app/node_modules
+chapter10/ts-simple-app/app/dist
+chapter10/ts-simple-app/app/.react-router
