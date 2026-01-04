@@ -116,3 +116,28 @@ console.log(checkUser({
 // }));
 
 
+// 스터디원의
+/*
+const UserSchemaDiscriminated = z.discriminatedUnion('type', [
+  z.object({
+    type: z.literal('email'),
+    email: z.string().email(),
+    phone: z
+      .string()
+      .regex(/^010-\d{4}-\d{4}$/)
+      .optional(),
+  }),
+  z.object({
+    type: z.literal('phone'),
+    email: z.string().email().optional(),
+    phone: z.string().regex(/^010-\d{4}-\d{4}$/),
+  }),
+]);
+
+type UserDiscriminated = z.infer<typeof UserSchemaDiscriminated>;
+
+function checkUser(user: UserDiscriminated): boolean {
+  return UserSchemaDiscriminated.safeParse(user).success;
+}
+*/
+
